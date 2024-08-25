@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FlythroughCam
   - Skibidi Tag
+  - Boundary
   layers:
   - Default
   - TransparentFX

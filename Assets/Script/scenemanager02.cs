@@ -9,12 +9,14 @@ public class scenemanager02 : MonoBehaviour
     public Animator animator;
     private int levelToLoad;
     public GameObject readyScreen;
+    private float timer = 19.2f;
 
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        timer -= Time.deltaTime;
+        if(timer <= 0.0f)
         {
             FadeToLevel(2);
         }
