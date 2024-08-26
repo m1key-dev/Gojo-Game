@@ -24,5 +24,7 @@ public class gojoRed : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        //potom musim pridat OnCollisionEnter2D k enemy projectiles aby se nicily na impactu
+        //a hp system
     }
 }

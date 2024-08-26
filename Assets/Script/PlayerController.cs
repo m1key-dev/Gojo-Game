@@ -34,4 +34,6 @@ public class PlayerController : MonoBehaviour
         bool moveLeft = hInput < 0;
         animator.SetBool("moveLeft", moveLeft);
     }
+
+    
 }
