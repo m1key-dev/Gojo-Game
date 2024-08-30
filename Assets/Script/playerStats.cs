@@ -28,7 +28,7 @@ public class playerStats : MonoBehaviour
         {
             Die();
         }
-    }
+    } //kdyz nejsou hpka, propojit s player controllerem a zastavit pohyb (dat podminku na pohyb = currentHealth > 0)
 
     public void TakeDamage(float damage)
     {

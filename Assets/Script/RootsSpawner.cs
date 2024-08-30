@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RootsSpawner : MonoBehaviour
@@ -24,6 +26,8 @@ public class RootsSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         playerX = Player.position.x-1.5f;
         if (timer < spawnRate)
 
@@ -35,17 +39,24 @@ public class RootsSpawner : MonoBehaviour
             {
                 timer = 0;
                 spawnRoots();
+                
             }
-
-        Destroy (rootsAttack.gameObject, 2f);
+            
+        
 
     }
+
+    
+
 
     void spawnRoots()
     {
         float leftmostPoint = transform.position.x - widthOffset;
         float rightmostPoint = transform.position.x + widthOffset;
 
-        Instantiate(rootsAttack, new Vector3(playerX, ySpawnOffset, 0), transform.rotation);
+        var copy = Instantiate(rootsAttack, new Vector3(playerX, ySpawnOffset, 0), transform.rotation);
+        
     }
+
+    
 }

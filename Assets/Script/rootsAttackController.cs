@@ -24,5 +24,10 @@ public class rootsAttackController : MonoBehaviour
         {
             collision.GetComponent<playerStats>().TakeDamage(damage);
         }
+
+        if (collision.gameObject.tag == "Player Projectile")
+        {
+            Destroy(gameObject);
+        }
     }
 }
