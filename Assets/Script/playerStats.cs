@@ -38,6 +38,8 @@ public class playerStats : MonoBehaviour
 
     public void Die()
     {
+        animator.SetBool("moveLeft", false);
+        animator.SetBool("moveRight", false);
         animator.SetBool("isDead", true);
     }
 }

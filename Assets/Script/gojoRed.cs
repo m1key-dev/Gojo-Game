@@ -24,6 +24,12 @@ public class gojoRed : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if(collision.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
+        
+        }
         //potom musim pridat aby se to nicilo kdyz dojde na enemaka
         //a hp system
     }

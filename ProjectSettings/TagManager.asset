@@ -8,6 +8,8 @@ TagManager:
   - Skibidi Tag
   - Boundary
   - Enemy Projectile
+  - Player Projectile
+  - Enemy
   layers:
   - Default
   - TransparentFX
