@@ -6,6 +6,7 @@ public class gojoRed : MonoBehaviour
 {
 
     public float moveSpeed;
+    public float damage = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,9 @@ public class gojoRed : MonoBehaviour
 
         if(collision.gameObject.tag == "Enemy")
         {
+            collision.GetComponent<EnemyBehaviour>().TakeDamage(damage);
             Destroy(gameObject);
+
         
         }
         //potom musim pridat aby se to nicilo kdyz dojde na enemaka
