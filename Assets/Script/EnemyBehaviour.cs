@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.Callbacks;
 using UnityEngine;
@@ -16,10 +17,11 @@ public class EnemyBehaviour : MonoBehaviour
     Transform player;
     Rigidbody2D rb;
     public float speed = 5f;
-    public int attackType;
+    public int attackType = 0;
 
     private float nextFireTime = 0;
     public float cooldownTime = 2.5f;
+
 
 
     // Start is called before the first frame update
@@ -62,9 +64,12 @@ public class EnemyBehaviour : MonoBehaviour
 
     public void attackTarget()
     {
-        attackType = Random.Range(1,3);
+        attackType = attackType + 1;
         animator.SetInteger("Attack", attackType);
-        attackType = 0;
+        if(attackType == 3){
+            attackType = 0;
+        }
+        
     
     }
 }
